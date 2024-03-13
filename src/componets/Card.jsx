@@ -1,39 +1,41 @@
 import './Card.css';
 
-// creating a second component: Hello
+
+
+const Feature = (props) => {
+  return (
+    <p className={`card-text ${props.symbol === '✘' ? 'text-muted' : ''}`}>
+      {props.symbol} {props.feature}
+    </p>
+  )
+}
+
+
 const Card = (props) => {
 
   return (
-    <div className="card">
-      <div className='card-header'>
-      <p className="text-muted">{ props.name }</p>
-      <h2>${props.num}/month</h2>
-      </div>
-      <div className="card-body">
-       <p>✓  {props.user}</p>
-       <p>✓  50GB Storage</p>
-       <p>✓  Unlimited Public Projects</p>
-       <p>✓  Community Access</p>
-       <div className={props.className}>
-        <p>{props.symbol}  Unlimited Private Projects</p>
-       <p {...props.className}>{props.symbol}  Dedicated Phone Support</p>
-       <p {...props.className}>{props.symbol}  Free Subdomian</p>
-       <div className={props.property}>
-       <p{...props.className}>{props.wrong}{props.right}  Monthly Status Report</p>
-       </div>
-       </div>
-
-
-
-        
-
-
-      </div>
-    
-     <button className='button bg-info'>BUTTON</button>
-    
+    <div className="card mx-3" style={{width: '18rem'}}>
+      <div className="card-header">
+        <p className="text-center">{ props.card.type }</p>
+        <h2 className="card-title text-center">{ props.card.cost }</h2>
     </div>
-  )
-} 
+      <div className="card-body">
+      <p>✔  { props.card.seperateFeature}</p>
+        {
+          
+          props.features.map((feature, index) => {
+            let symbol = props.card.features.includes(feature) ? '✔' : '✘';
+          
+            return <Feature feature={feature} key={index} symbol={ symbol } property = "text-muted" />
+          })
+        }
+       <div className="button">
+       <button className="btn" style={{ backgroundColor: (props.card.type === 'FREE' || props.card.type === 'PLUS') ? '#4BA2FF' : '#007AFF' }}>Button</button>
+      </div>
 
-export default Card; // exporting the Hello component
+    </div>
+  </div>
+  )
+}
+
+export default Card;
