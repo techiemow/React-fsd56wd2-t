@@ -1,0 +1,21 @@
+.heading{
+    color: #88CBBD;
+}
+.name{
+    border: 1px solid #88CBBD;
+    width: 400px;
+}
+.decscription{
+    border: 1px solid #88CBBD;
+    width: 400px;
+}
+.todobtn{
+    border-radius: 10px;
+    position: relative;
+    right: 5rem;
+    background-color: #13AD89;
+}
+
+.todobtn:hover:not(:hover) {
+    opacity: rem;
+}
