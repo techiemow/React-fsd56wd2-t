@@ -2,6 +2,7 @@ import './Mytodos.css';
 
 const Mytodos = ({ todos, removeTodo, editTodo, filterStatus }) => {
   const handleEdit = (id, name, description) => {
+    
     const newName = prompt('Enter new name:', name);
     const newDescription = prompt('Enter new description:', description);
 
