@@ -1,5 +1,5 @@
-# React- Day -3: React hooks & states
-### React Shopping Cart Task
+# React- Day -5: React Hooks
+### React Todo Task
 
 - I have Completed the task using React .
 
@@ -8,14 +8,15 @@
 - Followed all the Requirements and done the accordingly with respect to it.
 
 **Requirements:**
--Create Todo Task with task name , Description & status 
 
--By default status needs to added as not completed for created todo
+-  Create Todo Task with task name , Description & status 
 
--There should be two buttons in the name of edit and Delete which used to perform update and delete created todos
+-  By default status needs to added as not completed for created todo
 
--By onclick on status it should show a dropdown for completed and not completed by that we can change the status of todo
+- There should be two buttons in the name of edit and Delete which used to perform update and delete created todos
 
--All todos should be displayed in Card
+- By onclick on status it should show a dropdown for completed and not completed by that we can change the status of todo
 
--There should be filter to display status completed, not completed and both statuses
+- All todos should be displayed in Card
+
+- There should be filter to display status completed, not completed and both statuses
