@@ -1,4 +1,4 @@
-;
+
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Card from "./componets/card";
 import Nav from "./componets/nav";
