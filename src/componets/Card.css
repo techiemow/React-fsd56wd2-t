@@ -1,29 +1,10 @@
-/* Card.css */
-.card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 40px;
-    justify-content: space-evenly;
-    border-radius: 20px;
-    width: 100rem;
-  }
-  
-  .card-header {
+.cards {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   
-  .btn{
-    min-width:210px;
-    border-radius: 100px;
-    color: white;
+  .card {
+    margin: 0px 45px; /* Add margin to separate cards */
+    width: 250px; /* Set a fixed width for each card */
   }
-  
-  .card-body p {
-    margin: 5px 0;
-  }
-  

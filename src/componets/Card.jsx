@@ -1,41 +1,20 @@
-import './Card.css';
-
-
-
-const Feature = (props) => {
+import "./card.css"
+const Card = ({ datas }) => {
   return (
-    <p className={`card-text ${props.symbol === '✘' ? 'text-muted' : ''}`}>
-      {props.symbol} {props.feature}
-    </p>
-  )
-}
-
-
-const Card = (props) => {
-
-  return (
-    <div className="card mx-3" style={{width: '18rem'}}>
-      <div className="card-header">
-        <p className="text-center">{ props.card.type }</p>
-        <h2 className="card-title text-center">{ props.card.cost }</h2>
+    <div className="cards d-flex flex-wrap">
+      {datas.map(data => (
+        <div className="card mb-4" style={{ width: '18rem' }} key={data.id}>
+          <img src={data.img} className="card-img-top" alt="..." style={{ height: '200px', objectFit: 'cover' }} />
+          <div className="card-body">
+            <h5 className="card-title">{data.topic}</h5>
+            <br/>
+            <p className="card-text"><span className="text-muted">by:</span>  {data.author}</p>
+            <p className="card-text"><span className="text-muted">Date:</span> {data.date}</p>
+          </div>
+        </div>
+      ))}
     </div>
-      <div className="card-body">
-      <p>✔  { props.card.seperateFeature}</p>
-        {
-          
-          props.features.map((feature, index) => {
-            let symbol = props.card.features.includes(feature) ? '✔' : '✘';
-          
-            return <Feature feature={feature} key={index} symbol={ symbol } property = "text-muted" />
-          })
-        }
-       <div className="button">
-       <button className="btn" style={{ backgroundColor: (props.card.type === 'FREE' || props.card.type === 'PLUS') ? '#4BA2FF' : '#007AFF' }}>Button</button>
-      </div>
-
-    </div>
-  </div>
-  )
+  );
 }
 
 export default Card;
